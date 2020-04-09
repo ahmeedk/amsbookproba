@@ -51,6 +51,7 @@ public class Interface {
         diceButton.setOnAction(e -> {
             removeAllButtons();
             // launch roll dice view
+            new DiceScene(root).run();
         });
 
         x = x + xShift;
