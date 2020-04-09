@@ -4,18 +4,23 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="707.0" prefWidth="707.0" style="-fx-background-color: Azure;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Launcher">
-   <children>
-      <Label layoutX="120.0" layoutY="133.0" prefHeight="54.0" prefWidth="439.0" text="Introduction to Probability" textAlignment="CENTER" textFill="#171819">
+<AnchorPane prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: Azure;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Launcher">
+    <children>
+        <Label layoutX="120.0" layoutY="133.0" prefHeight="54.0" prefWidth="439.0" text="Probability Laboratory" textAlignment="CENTER" textFill="#171819">
+            <font>
+                <Font name="System Italic" size="36.0" />
+            </font>
+        </Label>
+        <VBox layoutX="102.0" layoutY="188.0" />
+        <TextArea editable="false" layoutX="87.0" layoutY="213.0" prefHeight="222.0" prefWidth="546.0" text="This Application is an Introduction to probability by giving &#10;user some frinedly simulation of probability evenment.&#10;this Application contains the simulation of examples and &#10;exercices of book : &#10;Introduction to probability by&#10;Charles M. Grinstead, Swarthmore College&#10;J. Laurie Snell, Dartmouth College">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextArea>
+      <Label layoutX="384.0" prefHeight="54.0" prefWidth="322.0" text="Probability Laboratory" textAlignment="CENTER" textFill="#171819">
          <font>
-            <Font name="System Italic" size="36.0" />
+            <Font name="System Italic" size="24.0" />
          </font>
       </Label>
-      <VBox layoutX="102.0" layoutY="188.0" />
-      <TextArea editable="false" layoutX="87.0" layoutY="213.0" prefHeight="222.0" prefWidth="546.0" text="This Application is an Introduction to probability by giving &#10;user some frinedly simulation of probability evenment.&#10;this Application contains the simulation of examples and &#10;exercices of book : &#10;Introduction to probability by&#10;Charles M. Grinstead, Swarthmore College&#10;J. Laurie Snell, Dartmouth College">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextArea>
-   </children>
+    </children>
 </AnchorPane>

@@ -6,9 +6,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import views.Interface;
 
 import java.io.IOException;
-import java.util.List;
 
 
 public class Launcher extends Application {
@@ -17,7 +17,6 @@ public class Launcher extends Application {
 
     private Group root;
 
-    private List<Button> chapters;
 
     @Override
     public void start(Stage primaryStage) {
@@ -28,23 +27,24 @@ public class Launcher extends Application {
         this.scene = new Scene(this.root);
         this.scene.setFill(Color.AZURE);
 
-        Button viewChaptersButton = new Button("Go to chapters");
+        Button viewChaptersButton = new Button("Start Playing");
         viewChaptersButton.setPrefWidth(210);
         viewChaptersButton.setPrefHeight(34);
         viewChaptersButton.setLayoutX(235);
         viewChaptersButton.setLayoutY(490);
 
         viewChaptersButton.setOnAction(event -> {
-            root.getChildren().remove(0,root.getChildren().size()-1);
+            root.getChildren().remove(0, root.getChildren().size());
+            new Interface(root).run();
         });
         this.root.getChildren().add(viewChaptersButton);
 
-        // new AppFront(this.root).addChapter();
 
         primaryStage.setTitle("Learning Probability Application");
         primaryStage.setScene(this.scene);
         primaryStage.show();
     }
+
     private Parent loadFile(String fileName) {
         Parent p = null;
         try {
@@ -52,8 +52,6 @@ public class Launcher extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return p;
     }
-
 }
