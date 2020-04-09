@@ -1,5 +1,7 @@
 package bookexos;
 
+import javafx.util.Pair;
+
 import java.util.Random;
 
 public class Examples {
@@ -55,5 +57,45 @@ public class Examples {
             }
         }
         return nbOfSucces / turnsNb;
+    }
+
+
+    public int[] hTSimulation(int n) {
+        int j = 0;
+        int k = 0;
+        boolean lastWinner;
+
+        int[] resutls = new int[2];
+
+        for (int i = 0; i < n; i++) {
+
+            if (random.nextBoolean()) {
+                j++;
+                lastWinner = true;
+            } else {
+                j--;
+                lastWinner = false;
+            }
+            if (j > 0 || (j == 0 && lastWinner)) {
+                k++;
+            }
+
+        }
+        resutls[0] = j;
+        resutls[1] = k;
+
+        return resutls;
+    }
+
+    public int[] spikeGraph(int n) {
+
+        int[] resutls = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            resutls[i] = hTSimulation(40)[0];
+        }
+
+        return resutls;
+
     }
 }

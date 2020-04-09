@@ -44,7 +44,6 @@ public class Interface {
             new CoinScene(root).run();
         });
 
-
         x = x + xShift;
         Button diceButton = getButton("Roll dice", x, y, width, height);
         this.root.getChildren().add(diceButton);
