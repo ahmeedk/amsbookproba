@@ -12,7 +12,7 @@
             </font>
         </Label>
         <VBox layoutX="102.0" layoutY="188.0" />
-        <TextArea editable="false" layoutX="87.0" layoutY="213.0" prefHeight="222.0" prefWidth="546.0" text="This Application is an Introduction to probability by giving &#10;user some frinedly simulation of probability evenment.&#10;this Application contains the simulation of examples and &#10;exercices of book : &#10;Introduction to probability by&#10;Charles M. Grinstead, Swarthmore College&#10;J. Laurie Snell, Dartmouth College">
+        <TextArea editable="false" layoutX="87.0" layoutY="213.0" prefHeight="222.0" prefWidth="546.0" text="This Application is an Introduction to probability by giving &#10;user some frinedly simulation of probability evenment.&#10;this Application contains the simulation of examples and &#10;exercises of book : &#10;Introduction to probability by&#10;Charles M. Grinstead, Swarthmore College&#10;J. Laurie Snell, Dartmouth College">
             <font>
                 <Font size="18.0" />
             </font>

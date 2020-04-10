@@ -4,7 +4,7 @@ import javafx.util.Pair;
 
 import java.util.Random;
 
-public class Examples {
+public class ExamplesImpl {
 
     Random random = new Random();
 
@@ -87,15 +87,31 @@ public class Examples {
         return resutls;
     }
 
-    public int[] spikeGraph(int n) {
+    public int[][] spikeGraph(int n) {
 
-        int[] resutls = new int[n];
+        int[][] results = new int[n][2];
 
         for (int i = 0; i < n; i++) {
-            resutls[i] = hTSimulation(40)[0];
+            results[i][0] = hTSimulation(n)[0];
+            results[i][1] = hTSimulation(n)[1];
         }
+        return results;
+    }
 
+
+    public int[] hTSimulationPennies(int n) {
+
+        int[] resutls = new int[n];
+        resutls[0] = random.nextBoolean() ? 1 : 0;
+
+        for (int i = 1; i < n; i++) {
+
+            if (random.nextBoolean()) {
+                resutls[i] = resutls[i - 1] + 1;
+            } else {
+                resutls[i] = resutls[i - 1] - 1;
+            }
+        }
         return resutls;
-
     }
 }
