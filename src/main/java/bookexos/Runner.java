@@ -14,8 +14,10 @@ public class Runner {
 //        System.out.println("peter winning penny = " + results[0] + " number of time a head = " + results[1]);
 
         Exercises exercises = new Exercises();
-        exercises.exercise_16(1000000);
+        // exercises.exercise_16(1000000);
 
+        RandomWalk randomWalk = new RandomWalk();
+        randomWalk.randomWalkIn3D();
 
     }
 
