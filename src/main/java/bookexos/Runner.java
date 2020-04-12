@@ -13,9 +13,10 @@ public class Runner {
 //        int[] results = examples.hTSimulation(40);
 //        System.out.println("peter winning penny = " + results[0] + " number of time a head = " + results[1]);
 
-
         Exercises exercises = new Exercises();
-        exercises.exercise_4(100000);
+        exercises.exercise_16(1000000);
+
+
     }
 
 

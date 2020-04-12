@@ -9,19 +9,28 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
-public class PeterWinning extends Application {
+import java.util.Map;
 
-    private ExamplesImpl examplesImpl = new ExamplesImpl();
+public class GraphRender extends Application {
 
     private Group root;
 
     private Scene scene;
 
+    private Exercises exercises = new Exercises();
+    private double[][] data;
+
+    @Override
+    public void init() throws Exception {
+
+        int n = 100000;
+        data= exercises.exercise_14_v2(n,50);
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        int[] data = examplesImpl.hTSimulationPennies(1000);
-        BarChart winningChart = getBarChart(data, 50, 50);
+        BarChart winningChart = getBarChart(data);
         this.root = new Group(winningChart);
         this.scene = new Scene(root, 1500, 700);
 
@@ -31,7 +40,7 @@ public class PeterWinning extends Application {
 
     }
 
-    private BarChart getBarChart(int[] data, int x, int y) {
+    private BarChart getBarChart(double[][] data) {
 
         CategoryAxis xAxis = new CategoryAxis();
         NumberAxis yAxis = new NumberAxis();
@@ -40,16 +49,21 @@ public class PeterWinning extends Application {
         XYChart.Series series = new XYChart.Series();
 
         for (int i = 0; i < data.length; i++) {
-            series.getData().add(new XYChart.Data(String.valueOf(i), data[i]));
+            series.getData().add(new XYChart.Data(String.valueOf(data[i][0]), data[i][1]));
         }
         //Setting the data to Line chart
         barChart.getData().add(series);
 
-        barChart.setTranslateX(x);
-        barChart.setTranslateY(y);
-        barChart.setPrefWidth(1400);
+
+        barChart.setTranslateX(50);
+        barChart.setTranslateY(50);
+        barChart.setPrefWidth(1200);
         barChart.setPrefHeight(600);
 
         return barChart;
+    }
+
+    public void startApp(Map<String, String> args) {
+        launch();
     }
 }
