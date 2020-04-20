@@ -1,4 +1,4 @@
-package bookexos;
+package bookexos.discreteproba;
 
 import java.util.Random;
 

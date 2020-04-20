@@ -1,4 +1,4 @@
-package bookexos;
+package bookexos.discreteproba;
 
 import javafx.util.Pair;
 

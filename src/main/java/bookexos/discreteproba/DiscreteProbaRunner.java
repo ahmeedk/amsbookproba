@@ -1,7 +1,7 @@
-package bookexos;
+package bookexos.discreteproba;
 
 
-public class Runner {
+public class DiscreteProbaRunner {
 
 
     public static void main(String[] arg) {
@@ -17,7 +17,7 @@ public class Runner {
         // exercises.exercise_16(1000000);
 
         RandomWalk randomWalk = new RandomWalk();
-        randomWalk.randomWalkIn3D();
+        randomWalk.randomWalkIn1D();
 
     }
 

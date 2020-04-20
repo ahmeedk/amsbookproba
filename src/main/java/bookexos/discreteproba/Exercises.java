@@ -1,4 +1,4 @@
-package bookexos;
+package bookexos.discreteproba;
 
 import javax.lang.model.element.UnknownElementException;
 import javax.lang.model.type.UnknownTypeException;

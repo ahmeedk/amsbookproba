@@ -1,5 +1,7 @@
 package bookexos;
 
+import bookexos.continuous.Examples;
+import bookexos.discreteproba.Exercises;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -18,13 +20,14 @@ public class GraphRender extends Application {
     private Scene scene;
 
     private Exercises exercises = new Exercises();
+    private Examples examples = new Examples();
     private double[][] data;
 
     @Override
-    public void init() throws Exception {
+    public void init() {
 
-        int n = 100000;
-        data= exercises.exercise_14_v2(n,50);
+        int n = 10000;
+        data = examples.sumOfTwoRV(n);
     }
 
     @Override
