@@ -11,6 +11,6 @@ public class ContinuousProbaRunner {
         // continuousProbaExercises.exercise_7(10000);
 
         ContinuousDensitiesFunctionExos cdf = new ContinuousDensitiesFunctionExos();
-        cdf.exercise_11(10000);
+        cdf.exercise_17(10000);
     }
 }

@@ -31,8 +31,8 @@ public class GraphRender extends Application {
     @Override
     public void init() {
 
-        int n = 1000000;
-        data = continuousDensitiesFunctionExos.exercise_9(n);
+        int n = 1000;
+        data = continuousDensitiesFunctionExos.exercise_22(n);
     }
 
     @Override

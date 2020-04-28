@@ -85,7 +85,57 @@ public class ContinuousDensitiesFunctionExos {
         }
 
         double avg_1 = sum_1 / n;
-        System.out.println("Coming after 100 minutes,  the average value is : " + avg_1);
+        System.out.println("Coming after 100 minutes, the average value is : " + avg_1);
     }
 
+    public void exercise_17(int n) {
+
+        double occ_5 = 0;
+        double occ_5_7 = 0;
+
+        for (int i = 10; i < n; i++) {
+            double k = random.nextDouble() * 8 + 2;
+            if (k > 5) {
+                occ_5++;
+            }
+
+            if (k > 5 && k < 7) {
+                occ_5_7++;
+            }
+        }
+
+        double proba_5 = occ_5 / n;
+        double proba_5_7 = occ_5_7 / n;
+
+        System.out.println("probability of x > 5 = " + proba_5);
+        System.out.println("probability of 5 < x < 7 = " + proba_5_7);
+
+    }
+
+
+    public double[][] exercise_22(int n) {
+        double[][] tab = new double[10][2];
+
+        for (int j = 0; j < 10; j++) {
+            tab[j][0] = j * 3 + 35;
+            tab[j][1] = 0;
+        }
+
+        for (int i = 0; i < n; i++) {
+
+            double nb_head = 0;
+            for (int k = 0; k < 100; k++) {
+                if (random.nextBoolean())
+                    nb_head++;
+            }
+
+            for (int j = 0; j < 10; j++) {
+                if (tab[j][0] == nb_head)
+                    tab[j][1]++;
+            }
+
+        }
+
+        return tab;
+    }
 }
