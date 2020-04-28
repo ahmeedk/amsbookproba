@@ -1,5 +1,7 @@
 package bookexos;
 
+import bookexos.continuous.ContinuousDensitiesFunctionExos;
+import bookexos.continuous.ContinuousProbaExercises;
 import bookexos.continuous.Examples;
 import bookexos.discreteproba.Exercises;
 import javafx.application.Application;
@@ -20,14 +22,17 @@ public class GraphRender extends Application {
     private Scene scene;
 
     private Exercises exercises = new Exercises();
+
+    private ContinuousProbaExercises continuousProbaExercises = new ContinuousProbaExercises();
+    private ContinuousDensitiesFunctionExos continuousDensitiesFunctionExos = new ContinuousDensitiesFunctionExos();
     private Examples examples = new Examples();
     private double[][] data;
 
     @Override
     public void init() {
 
-        int n = 10000;
-        data = examples.sumOfTwoRV(n);
+        int n = 1000000;
+        data = continuousDensitiesFunctionExos.exercise_9(n);
     }
 
     @Override
@@ -66,7 +71,4 @@ public class GraphRender extends Application {
         return barChart;
     }
 
-    public void startApp(Map<String, String> args) {
-        launch();
-    }
 }
