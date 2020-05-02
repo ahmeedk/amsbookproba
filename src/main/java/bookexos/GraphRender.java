@@ -13,8 +13,6 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
-import java.util.Map;
-
 public class GraphRender extends Application {
 
     private Group root;
@@ -61,7 +59,6 @@ public class GraphRender extends Application {
         }
         //Setting the data to Line chart
         barChart.getData().add(series);
-
 
         barChart.setTranslateX(50);
         barChart.setTranslateY(50);
